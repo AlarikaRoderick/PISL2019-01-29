@@ -63,7 +63,7 @@ public class C_EditDist {
         for (int i = 0; i < one.length(); i++) {
             for (int j = 0; j < two.length(); j++) {
                 int coef = getDiff(one.charAt(i), two.charAt(j));
-                array[i + 1][j + 1] = findMin(array[i - 1 + 1][j + 1] + 1, array[i + 1][j - 1 + 1] + 1, array[i - 1 + 1][j - 1 + 1] + coef);
+                array[i + 1][j + 1] = findMin(array[i][j + 1] + 1, array[i + 1][j] + 1, array[i][j] + coef);
             }
         }
 
